@@ -21,6 +21,7 @@ Remix IDE can be used in browser or downloaded as a desktop application. This sm
 ## Usage
 
 To test deploy this contract using Remix IDE, navigate to the "Deploy & Run Transactions" tab after compiling and deploy using the injected provider - Metamask option or other preferred VM. The deployer contract will deploy the token and crowdsale contracts and provide addresses for them, enabling the user to purches KaseiCoin for Ethereum.
+
 ---
 
 ## Evaluation Evidence
