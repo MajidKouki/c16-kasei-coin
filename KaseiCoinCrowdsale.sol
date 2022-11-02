@@ -1,20 +1,29 @@
 pragma solidity ^0.5.0;
 
+// Import the following contracts from the OpenZeppelin library: Crowdsale and MintedCrowdsale as well as KaseiCoin contract.
 import "./KaseiCoin.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol";
 
 
 // Have the KaseiCoinCrowdsale contract inherit the following OpenZeppelin:
-// * Crowdsale
-// * MintedCrowdsale
-contract KaseiCoinCrowdsale { // UPDATE THE CONTRACT SIGNATURE TO ADD INHERITANCE
+
+contract KaseiCoinCrowdsale is Crowdsale, MintedCrowdsale {
     
     // Provide parameters for all of the features of your crowdsale, such as the `rate`, `wallet` for fundraising, and `token`.
     constructor(
-        // YOUR CODE HERE!
-    ) public Crowdsale(rate, wallet, token) {
-        // constructor can stay empty
+        uint rate,
+        address payable wallet,
+        KaseiCoin token
+    )
+    Crowdsale(
+        rate, 
+        wallet, 
+        token
+    ) 
+    public
+    {
+        // Constructor left blank intentionally
     }
 }
 
