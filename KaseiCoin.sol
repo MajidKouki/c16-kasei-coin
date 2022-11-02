@@ -16,9 +16,7 @@ contract KaseiCoin is ERC20, ERC20Detailed, ERC20Mintable {
         name,
         symbol,
         18
-    )
-    public 
-    {
+    ) public {
         // Constructor left blank intentionally
     }
 }
